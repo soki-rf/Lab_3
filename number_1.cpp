@@ -22,7 +22,7 @@ vector<T> generate_random_vector(size_t num, T min = -10, T max = 10)
 
 int main()
 {
-    vector<int> m = generate_random_vector<int>(10, 10, 50);
+    vector<int> m = generate_random_vector<int>(10, 10, 50); // генерируем массив по шаблону из лабы
     int a, f;
     cout << "Enter 'a'" << endl;
     cin >> a;
@@ -35,7 +35,7 @@ int main()
 
 
     for(int i=0; i < 10; ++i){
-        m[i] *= 2;
+        m[i] *= 2; // увеличили значения массива в 2 раза
     }
     cout << "V 2 raza bol'she: ";
     for(int i=0; i < 10; ++i){
@@ -45,7 +45,7 @@ int main()
 
 
     for(int i=0; i < 10; ++i){
-        m[i] -= a;
+        m[i] -= a; // вычли из каждого элемента массива число а
     }
     cout << "m[i] - a: ";
     for(int i=0; i < 10; ++i){
@@ -56,7 +56,7 @@ int main()
     f = m[0];
     cout << "Vse elementi podelili na m[0] = " << f << ": ";
     for(int i=0; i < 10; ++i){
-        cout << double(m[i]*(1.0)/f) << " ";
+        cout << double(m[i]*(1.0)/f) << " "; // делим элемент на m[0] и выводим, т.к. массив поддерживает только тип int
     }
 
     return 0;
