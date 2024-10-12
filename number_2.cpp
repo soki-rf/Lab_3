@@ -21,7 +21,7 @@ vector<T> generate_random_vector(size_t num, T min = -10, T max = 10)
 
 
 int main(){
-    vector<int> m = generate_random_vector<int>(10, 1, 30);
+    vector<int> m = generate_random_vector<int>(10, 1, 30); // генерируем массив по шаблону из лабы
     int sm, sm_2, sm_6, k1, k2, sm_k, s1, s2, sm_s;
     sm = 0;
     sm_2 = 0;
@@ -35,14 +35,14 @@ int main(){
     cout << endl;
 
     for(int i=0; i < 10; ++i){
-        sm += m[i];
-        sm_2 += m[i] * m[i];
+        sm += m[i]; // находим сумму всех элементов 
+        sm_2 += m[i] * m[i]; // находим сумму всех квадратов элементов
     }
     cout << "Summa vseh elementov = " << sm << endl;
     cout << "Summa vseh kvadratov elementov = " << sm_2 << endl;
 
     for(int i=0; i < 6; ++i){
-        sm_6 += m[i];
+        sm_6 += m[i]; // находим сумму первых 6-ти элементов
     }
     cout << "Summa pervih 6-ti elementov = " << sm_6 << endl;
     cout << endl;
@@ -51,7 +51,7 @@ int main(){
     cin >> k1;
     cin >> k2;
     for(int i = k1 - 1; i < k2; ++i){
-        sm_k += m[i];
+        sm_k += m[i]; // находим сумму на отрезке к1 : к2
     }
     cout << "Summa c k1 po k2 = " << sm_k << endl;
     cout << endl;
@@ -63,7 +63,7 @@ int main(){
     cin >> s1;
     cin >> s2;
     for(int i = s1 - 1; i < s2; ++i){
-        sm_s += m[i];
+        sm_s += m[i]; // находим сумму на отрезке s1 : s2
     }
     cout << "Srednee arifmeti4eskoe na otrezke [s1;s2] = " << double(sm_s*1.0 / (s2 - s1 + 1)) << endl;
     return 0;
