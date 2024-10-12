@@ -14,6 +14,7 @@ int main(){
         cnt1++;
     }
 
+    i = 0;
     while(s2[i++] != '\0'){
         cnt2++;
     }
